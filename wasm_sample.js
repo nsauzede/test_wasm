@@ -4,4 +4,5 @@ WebAssembly.instantiateStreaming(fetch("wasm_sample.wasm"))
     .then(wasmModule => {
         // this saves the exported function from WASM module for use in JS
         wasm_add = wasmModule.instance.exports.add;
+        wasm_sub = wasmModule.instance.exports.sub;
     });
